@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const BlogRoute = require('./routes/Blog');
+const AiBlogger  = require('./controllers/AiBlogger');
+app.use('/AiBlog', AiBlogger);
 app.use('/Blog', BlogRoute);
 app.use(cors())
 app.use(express.json());
